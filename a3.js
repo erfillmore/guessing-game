@@ -28,22 +28,21 @@ var goalGuess = prompt("What is my life goal?");
 if (goalGuess.toLowerCase() == "have my pets living in luxury" || baGuess.toLowerCase() == "pets in luxury" || baGuess.toLowerCase() == "luxurious life for pets") {
     alert("Woop!");
 } else {
-    alert("No! I want my pets to be able to live in the lap of luxury")
+    alert("No! I want my pets to be able to live in the lap of luxury");
 }
-console.log("Last question")
+console.log("Last question");
 
-var times = 4
-var count = prompt("How many alert boxes do you think I can create?", "")
+
+var count = prompt("How many alert boxes do you think I can create?", "");
 if (isNaN(count)) {
-    prompt("That is not a number, silly! Try again!")
+  count = prompt("That is not a number, silly! Try again!", "");
 }
-if (count === 0 || count == "") {
-    prompt("Well, don't worry, I didn't want to play your game ANYWAY")
-}
-for (count; count <= times; count++) {
-    alert("Count = " + times);
-}
-if (count => 3) {
+if (count == 0 ) {
+    alert("Well, don't worry, I didn't want to play your game ANYWAY");
+} else if (count => 3) {
     alert("Really?! " + count + " is way too much. I refuse to do this. I am not your puppet");
-    count = times + 1
+} else {alert("Fiiiiiine.")}
+
+for (count; count < 0; count++) {
+    alert("Count = " + count);
 }
