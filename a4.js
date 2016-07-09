@@ -24,9 +24,9 @@ function secondQuestion() {
   while (baGuess === "") {
       baGuess = prompt("What subject did I major in at university?", "");
       if (baGuess.toLowerCase() == "english literature" || baGuess.toLowerCase() == "english" || baGuess.toLowerCase() == "literature") {
-          alert("Well Done!");
+          document.getElementById("secondQ").innerHTML="Your answer of " +baGuess+ " was correct!";
       } else {
-          alert(":/ I studied English Literature....");
+          document.getElementById("secondQ").innerHTML="Your answer of " +baGuess+ " was incorrect!";
       }
   }
 }
@@ -34,9 +34,9 @@ function secondQuestion() {
 function thirdQuestion() {
       var goalGuess = prompt("What is my life goal?");
       if (goalGuess.toLowerCase() == "have my pets living in luxury" || goalGuess.toLowerCase() == "pets in luxury" || goalGuess.toLowerCase() == "luxurious life for pets") {
-          alert("Woop!");
+        document.getElementById("thirdQ").innerHTML="Your answer of " +goalGuess+ " was correct!";
       } else {
-          alert("No! I want my pets to be able to live in the lap of luxury");
+          document.getElementById("thirdQ").innerHTML="Your answer of " +goalGuess+ " was incorrect!";
       }
 }
 
@@ -46,11 +46,11 @@ function fourthQuestion() {
       count = prompt("That is not a number, silly! Try again!", "");
   }
   if (count == 0) {
-      alert("Well, don't worry, I didn't want to play your game ANYWAY");
+    document.getElementById("fourthQ").innerHTML="Well, don't worry, I didn't want to play your game ANYWAY";
   } else if (count => 3) {
-      alert("Really?! " + count + " is way too much. I refuse to do this. I am not your puppet");
+      document.getElementById("fourthQ").innerHTML="Really?! " + count + " is way too much. I refuse to do this. I am not your puppet";
   } else {
-      alert("Fiiiiiine.")
+      document.getElementById("fourthQ").innerHTML="Fiiiiiine."
   }
 
   for (count; count < 0; count++) {
