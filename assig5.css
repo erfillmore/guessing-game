@@ -1,0 +1,25 @@
+body {
+    font-family: Times New Roman. serif.;
+    color: #000;
+    font-size: 12px;
+    padding: 10px;
+}
+body div {
+    display: inline-block;
+}
+.correctColor {
+    border: 1px solid #000;
+    background-color: #012E12;
+    padding: 3em;
+    width: 5%;
+    color: #DADBE6;
+    text-align: center;
+}
+.inCorrectColor {
+    border: 1px solid #000;
+    background-color: #641300;
+    padding: 3em;
+    width: 5%;
+    color: #A9896A;
+    text-align: center;
+}
