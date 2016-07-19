@@ -7,11 +7,13 @@ function getName() {
     console.log(preferredName);
     alert("Welcome, " + preferredName + "!")
 }
+var score = 0
 
 function firstQuestion() {
     var guessPet = prompt("How many pets do I have?", "");
     if (guessPet == 2) {
         document.getElementById("firstQ").innerHTML="Your answer of " +guessPet+ " was correct!";
+        score++;
     } else if (guessPet > 2) {
         document.getElementById('firstQ').innerHTML="Your answer of " +guessPet+ " was too high, and thus incorrect!";
     } else {
@@ -25,6 +27,7 @@ function secondQuestion() {
       baGuess = prompt("What subject did I major in at university?", "");
       if (baGuess.toLowerCase() == "english literature" || baGuess.toLowerCase() == "english" || baGuess.toLowerCase() == "literature") {
           document.getElementById("secondQ").innerHTML="Your answer of " +baGuess+ " was correct!";
+          score++;
       } else {
           document.getElementById("secondQ").innerHTML="Your answer of " +baGuess+ " was incorrect!";
       }
@@ -35,6 +38,7 @@ function thirdQuestion() {
       var goalGuess = prompt("What is my life goal?");
       if (goalGuess.toLowerCase() == "have my pets living in luxury" || goalGuess.toLowerCase() == "pets in luxury" || goalGuess.toLowerCase() == "luxurious life for pets") {
         document.getElementById("thirdQ").innerHTML="Your answer of " +goalGuess+ " was correct!";
+        score++;
       } else {
           document.getElementById("thirdQ").innerHTML="Your answer of " +goalGuess+ " was incorrect!";
       }
@@ -47,16 +51,14 @@ function fourthQuestion() {
   }
   if (count == 0) {
     document.getElementById("fourthQ").innerHTML="Well, don't worry, I didn't want to play your game ANYWAY";
-  } else if (count => 3) {
+    score++;
+  } else if (count >= 3) {
       document.getElementById("fourthQ").innerHTML="Really?! " + count + " is way too much. I refuse to do this. I am not your puppet";
   } else {
       document.getElementById("fourthQ").innerHTML="Fiiiiiine."
   }
 
-  for (count; count < 0; count++) {
-      alert("Count = " + count);
-  }
-}
+
 
 function biggestFunction() {
     if (preferredName == null) {
@@ -75,5 +77,5 @@ function biggestFunction() {
 
     fourthQuestion();
 
-
+    alert("Well done, you scored " + score +" points!");
 }
